@@ -9,6 +9,7 @@ namespace CloudBox.Application.Interfaces
     public interface IUniteOfWork
     {
         IFileRepository Files { get; }
+        IUserRepository Users { get; }
 
         Task BeginTransactionAsync(CancellationToken ct = default);
         Task CommitAsync(CancellationToken ct = default);

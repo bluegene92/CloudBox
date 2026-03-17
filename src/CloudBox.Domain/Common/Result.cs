@@ -10,6 +10,7 @@ namespace CloudBox.Domain.Common
     {
         public bool IsSuccess { get; }
         public bool IsFailure => !IsSuccess;
+        public string Error { get; }
 
         public static Result Success() => new(true, null);
         public static Result Failure(string error) => new(false, error);
